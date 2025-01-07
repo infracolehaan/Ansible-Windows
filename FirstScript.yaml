@@ -1,5 +1,5 @@
 - name: Run basic PowerShell script
   hosts: all
-  win_powershell:
+  ansible.windows.win_powershell:
     script: |
       echo "Hello World"
