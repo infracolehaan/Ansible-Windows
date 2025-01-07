@@ -1,5 +1,8 @@
 - name: Powershell
   hosts: all
+
+  vars:
+    asdf:"this is a test string"
   tasks:
      - name: Run basic PowerShell script
        ansible.windows.win_powershell:
