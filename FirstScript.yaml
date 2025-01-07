@@ -1,7 +1,7 @@
 - name: Powershell
   hosts: all
   vars:
-    input_me: value set in playbook var
+    foo: value set in playbook var
   tasks:
      - name: Run basic PowerShell script
        ansible.windows.win_powershell:
@@ -9,7 +9,7 @@
             [CmdLetBinding()]
             param
             (
-                [String]$input_me
+                [String]$foo
             )
             $ErrorActionPreference = "Stop"
-            Write-Output "The output is: $input_me"
+            Write-Output "The output is: $foo"
