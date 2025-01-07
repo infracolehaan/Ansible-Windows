@@ -1,5 +1,5 @@
 - name: Example from an Ansible Playbook
-  hosts: 10.210.63.65
+  hosts: all
   become: true
   tasks:
      - name: ping windows
