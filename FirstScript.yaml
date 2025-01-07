@@ -1,6 +1,5 @@
 - name: Powershell
   hosts: all
-  become: true
   tasks:
      - name: Run basic PowerShell script
        ansible.windows.win_powershell:
