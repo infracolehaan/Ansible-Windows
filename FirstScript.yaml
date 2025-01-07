@@ -1,8 +1,7 @@
 - name: Powershell
   hosts: all
-
   vars:
-    asdf:"this is a test string"
+    input
   tasks:
      - name: Run basic PowerShell script
        ansible.windows.win_powershell:
@@ -10,7 +9,7 @@
             [CmdLetBinding()]
             param
             (
-                [String]$asdf
+                [String]$input
             )
             $ErrorActionPreference = "Stop"
-            Write-Output "$asdf"
+            Write-Output "$input"
