@@ -1,4 +1,5 @@
 - name: Install Rapid7 RHEL
+  hosts: all
   ansible.windows.win_powershell:
     script: |
       echo "Hello World"
