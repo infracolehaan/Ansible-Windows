@@ -4,6 +4,6 @@
      - name: Run basic PowerShell script
        ansible.windows.win_powershell:
          script: |
-            $input = $Ansible.ExtraVars.input
+            $input = $Ansible.ExtraVars.asdf
             $ErrorActionPreference = "Stop"
             Write-Output "$input"
