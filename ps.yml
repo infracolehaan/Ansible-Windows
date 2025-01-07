@@ -1,4 +1,0 @@
-- name: Install Rapid7 RHEL
-  ansible.windows.win_powershell:
-    script: |
-      echo "Hello World"
