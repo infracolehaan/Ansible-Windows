@@ -8,8 +8,7 @@
             [CmdLetBinding()]
             param
             (
-                [Parameter(Mandatory = $true)] 
                 [String]$input
             )
             $ErrorActionPreference = "Stop"
-            Out-String -InputObject "$input"
+            Write-Output "$input"
