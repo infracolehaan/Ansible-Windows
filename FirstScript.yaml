@@ -4,5 +4,11 @@
      - name: Run basic PowerShell script
        ansible.windows.win_powershell:
          script: |
+             [CmdLetBinding()]
+            param
+            (
+                [Parameter(Mandatory = $true)] 
+                [String]$input
+            )
             $ErrorActionPreference = "Stop"
-            Out-String -InputObject "Hello World!"
+            Out-String -InputObject "$input"
