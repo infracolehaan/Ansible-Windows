@@ -1,6 +1,6 @@
 - name: Run basic PowerShell script
   hosts: all
   remote_user: s.procauto.prod
-  ansible.windows.win_powershell:
+  ansible.windows.win_command:
     script: |
       echo "Hello World"
