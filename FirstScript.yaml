@@ -1,7 +1,5 @@
 - name: Powershell
   hosts: all
-  vars:
-    foo: value set in playbook var
   tasks:
      - name: Run basic PowerShell script
        ansible.windows.win_powershell:
