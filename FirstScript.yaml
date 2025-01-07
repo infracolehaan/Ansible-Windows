@@ -4,7 +4,5 @@
      - name: Run basic PowerShell script
        ansible.windows.win_powershell:
          script: |
-            $ErrorActionPreference = "continue"
-            Write-Output "Hello World!"
-            Write-Verbosxe "Hello World!"
-            Write-Debug "Hello World!"
+            $ErrorActionPreference = "Stop"
+            Out-String -InputObject "Hello World!"
