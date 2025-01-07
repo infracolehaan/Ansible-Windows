@@ -2,9 +2,9 @@
   hosts: all
   tasks:
      - name: Run basic PowerShell script
-       ansible.windows.win_powershell:
        vars:
          foo: this is an input variable
+       ansible.windows.win_powershell:
          script: |
             [CmdLetBinding()]
             param
