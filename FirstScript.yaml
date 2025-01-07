@@ -12,4 +12,4 @@
                 [String]$input_me
             )
             $ErrorActionPreference = "Stop"
-            Write-Output "$input_me"
+            Write-Output "The output is: $input_me"
