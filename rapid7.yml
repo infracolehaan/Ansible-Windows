@@ -1,0 +1,16 @@
+- name: Install Rapid7 RHEL
+  hosts: all
+  become: true
+  tasks:
+     - name: Copy rapid 7 install file
+       ansible.builtin.copy:
+        src: rapid7-insight-agent-4.0.13.32-1.x86_64.rpm
+        dest: /tmp/rapid7-insight-agent-4.0.13.32-1.x86_64.rpm
+     - name: Install R7
+       command: rpm -i /tmp/rapid7-insight-agent-4.0.13.32-1.x86_64.rpm
+       register: Install
+     - debug: msg="{{ Install.stdout }}"
+     - name: Configure
+       command:  /opt/rapid7/ir_agent/components/insight_agent/4.0.13.32/configure_agent.sh --token us2:29adf8d8-a961-48a8-a43b-f1d6b5096252 --start
+       register: Configure
+     - debug: msg="{{ Configure.stdout }}"
