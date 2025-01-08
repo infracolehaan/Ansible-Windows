@@ -3,9 +3,16 @@
   tasks:
      - name: Run basic PowerShell script
        ansible.windows.win_powershell:
+         parameters:
+           value: "{{ foo }}"
          script: |
-            $value = "{{ foo }}"
+            [CmdLetBinding()]
+            param
+            (
+                [Parameter(Mandatory = $true)]
+                [string]$value
+            )
             $ErrorActionPreference = "Stop"
             Write-Output "$value"
-
+            
             EXIT
