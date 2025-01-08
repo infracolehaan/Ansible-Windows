@@ -1,7 +1,7 @@
 - name: Powershell
   hosts: all
-  vars_files:
-  - @/runner/env/extravars
+  vars:
+    foo: "bob"
   tasks:
      - name: Run basic PowerShell script
        ansible.windows.win_powershell:
