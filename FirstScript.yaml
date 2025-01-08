@@ -7,7 +7,7 @@
             [CmdLetBinding()]
             param
             (
-                [String]$Ansible.foo
+                [String]$foo
             )
             $ErrorActionPreference = "Stop"
-            Write-Output $Ansible.foo
+            Write-Output $foo
