@@ -13,3 +13,5 @@
             )
             $ErrorActionPreference = "Stop"
             Write-Output "The output is: $foo"
+        parameters:
+          foo: {{ food }} 
