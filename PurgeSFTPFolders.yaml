@@ -10,7 +10,7 @@
             param
             (
                 [Parameter(Mandatory = $true)]
-                [String]$dataArray
+                [array]$dataArray
             )
             $ErrorActionPreference = "Stop"
             ForEach($element in $dataArray)
