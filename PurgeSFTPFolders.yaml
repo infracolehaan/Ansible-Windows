@@ -15,8 +15,7 @@
             $ErrorActionPreference = "Stop"
             ForEach($element in $dataArray)
             {
-              Write-Output $element
-              New-Item -path "C:\temp\" -Name $element -ItemType "Directory" -Force
+              Write-Output "$element`n"
             }
 
             EXIT
