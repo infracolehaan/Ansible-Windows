@@ -16,7 +16,7 @@
             Write-Output "$value`n"
             
             EXIT
-        register: output
-- name: Process win_shell output
-  set_fact:
-    vms: "{{ output.stdout }}"
+       register: output
+     - name: Process win_shell output
+        set_fact:
+          vms: "{{ output.stdout }}"
