@@ -4,6 +4,8 @@
     new_foo: "{{ foo }}"
   tasks:
      - name: Run basic PowerShell script
+       vars:
+         new_foo: "{{ foo }}"
        ansible.windows.win_powershell:
          script: |
             [CmdLetBinding()]
