@@ -2,14 +2,12 @@
   hosts: all
   tasks:
      - name: Run basic PowerShell script
-       vars:
-         foo: this is an input variable
        ansible.windows.win_powershell:
          script: |
             [CmdLetBinding()]
             param
             (
-                [String]$foo
+                [String]$Ansible.foo
             )
             $ErrorActionPreference = "Stop"
             Write-Output $Ansible.foo
