@@ -11,5 +11,5 @@
             )
             $ErrorActionPreference = "Stop"
             Write-Output $new_foo
-       vars:
+       parameters:
          new_foo: "{{ foo }}"
