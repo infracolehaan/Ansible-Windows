@@ -14,3 +14,4 @@
             $ErrorActionPreference = "Stop"
             Write-Output $Ansible.foo
        register: Script     
+     - debug: msg="{{ Script.stdout }}"
