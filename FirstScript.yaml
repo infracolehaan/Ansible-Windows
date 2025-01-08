@@ -2,8 +2,6 @@
   hosts: all
   tasks:
      - name: Run basic PowerShell script
-       register: Script
-     - debug: msg="{{ Script.stdout }}"
        vars:
          foo: this is an input variable
        ansible.windows.win_powershell:
@@ -15,4 +13,6 @@
             )
             $ErrorActionPreference = "Stop"
             Write-Output "The output is: $foo"
+        register: Script
+     - debug: msg="{{ Script.stdout }}"
             
