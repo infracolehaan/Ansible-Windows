@@ -1,7 +1,6 @@
 - name: Powershell
   hosts: all
-  vars:
-    foo: "bob"
+  arguments: foo
   tasks:
      - name: Run basic PowerShell script
        ansible.windows.win_powershell:
