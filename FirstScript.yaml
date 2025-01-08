@@ -12,6 +12,4 @@
                 [String]$foo
             )
             $ErrorActionPreference = "Stop"
-            Write-Output "The output is: $foo"
-        parameters:
-          foo: {{ foo }} 
+            Write-Output $Ansible.foo
