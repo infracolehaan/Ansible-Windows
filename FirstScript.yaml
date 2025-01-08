@@ -13,6 +13,8 @@
                 [string]$value
             )
             $ErrorActionPreference = "Stop"
-            Write-Output "$value`n"
+            Write-Output "$value
+            asdf
+            qwerqwe"
             
             EXIT
