@@ -1,5 +1,5 @@
 - name: Powershell
-  hosts: all
+  hosts: "{{ server }}"
   tasks:
      - name: Run basic PowerShell script
        ansible.windows.win_powershell:
