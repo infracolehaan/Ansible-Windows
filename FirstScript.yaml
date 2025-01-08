@@ -13,3 +13,5 @@
             )
             $ErrorActionPreference = "Stop"
             Write-Output "The output is: $foo"
+         register: Script
+       - debug: msg="{{ Script.stdout }}"    
