@@ -1,0 +1,22 @@
+- name: Powershell
+  hosts: all
+  tasks:
+     - name: Run basic PowerShell script
+       ansible.windows.win_powershell:
+         parameters:
+           dataArray: "{{ purgeFolders }}"
+         script: |
+            [CmdLetBinding()]
+            param
+            (
+                [Parameter(Mandatory = $true)]
+                [String]$dataArray
+            )
+            $ErrorActionPreference = "Stop"
+            ForEach($element in $dataArray)
+            {
+              Write-Output $element
+              Write-Output "-----"
+            }
+
+            EXIT
